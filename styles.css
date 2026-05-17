@@ -1,0 +1,211 @@
+/* --- Estilos Globales y Fuentes de Google --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Fuente de Google implementada */
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #121212;
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, .logo {
+    font-family: 'Orbitron', sans-serif;
+    color: #39ff14;
+}
+
+/* --- Encabezado y Navegación --- */
+header {
+    background-color: #0a0a0a;
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #39ff14;
+}
+
+/* --- Estilos Básicos de Secciones --- */
+section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* --- Sección de Inicio --- */
+.hero-section {
+    background: linear-gradient(135deg, #0a1f0a 0%, #121212 100%);
+    color: #fff;
+    padding: 6rem 5%;
+    border-bottom: 2px solid #39ff14;
+}
+
+.video-container {
+    margin-top: 2rem;
+}
+
+/* --- Sección de Hardware --- */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea en pantallas pequeñas */
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #242424;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    flex: 1 1 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    border-color: #39ff14;
+}
+
+.product-image {
+    width: 100%; 
+    height: auto; 
+    border-radius: 4px; 
+    margin-bottom: 1rem; 
+    border: 1px solid #333; 
+}
+
+/* --- Sección de Reseñas --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.review-box {
+    background: #242424;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.review-box span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #39ff14; /* Nombres de reseñas en verde neón */
+}
+
+/* --- Sección de Contacto --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    background-color: #333; /* Cajas de texto oscuras */
+    color: #fff;
+    transition: outline 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto de resplandor al escribir en el formulario */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #39ff14;
+    box-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+button {
+    background-color: #39ff14; /* Botón verde neón */
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #32e012; /* Verde ligeramente más oscuro al pasar el mouse */
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
+}
+
+/* --- Pie de página --- */
+footer {
+    background-color: #0a0a0a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hace que el iframe sea responsivo en móviles */
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
